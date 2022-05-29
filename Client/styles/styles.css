@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+main{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: rgb(232, 238, 245);
+}
+.sideNav{
+    height: 100%;
+    flex-basis: 5%;
+    background: rgb(10, 99, 253);
+}
+.rightSide{
+    flex-basis: 95%;
+}
+.nav{
+    height: 10%;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+}
+.logo{
+    height: 4rem;
+    width: 4rem;
+}
+.logo img, .pic>img{
+    width: 100%;
+    height: 100%;
+}
+.right-box{
+    display: flex;
+    align-items: center;
+}
+.search{
+    display: flex;
+}
+.search p,.profile p,.searchChats p{
+    margin-left: 1rem;
+}
+.notification{
+    margin: 0 2rem 0 5rem;
+}
+.profile{
+    display: flex;
+}
+.chatSection{
+    display: flex;
+    /* border: 2px solid red; */
+    height: 100%;
+}
+.conversations{
+    height: 100%;
+    /* border: 2px solid red; */
+    flex-basis: 30%;
+    padding: 2% 2.5% 6% 3%;
+    overflow: scroll;
+}
+.conversations::-webkit-scrollbar,.chats::-webkit-scrollbar{
+    display: none;
+}
+.conversations h2{
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: rgb(14, 14, 69);
+}
+.searchChats{
+    display: flex;
+    padding: 0.6rem 1rem;
+    border: 2px solid rgb(201, 201, 201);
+    border-radius: 0.3rem;
+    color: rgb(170, 170, 170);
+    margin: 1rem 0 0.5rem 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.recentNew{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(14, 14, 69);
+    font-size: 0.9rem;
+    padding: 0 0.3rem;
+    font-weight: 500;
+}
+.people{
+    display: flex;
+    padding: 0.4rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 0.3rem;
+    margin: 0.8rem 0;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: 0.1s;
+}
+.people:hover{
+    transform: scale(1.1,1.1);
+}
+.wrap .pic{
+    height: 3.5rem;
+    width: 3.5rem;
+    margin-right: 0.8rem;
+}
+.wrap{
+    display: flex;
+    align-items: center;
+}
+.pic>img{
+    border-radius: 50%;
+}
+.time{
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+.time p{
+     color: rgb(14, 14, 69);
+     font-weight: 500;
+}
+.time span{
+    color: gray;
+    margin-left: 0.5rem;
+}
+.name h3{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(14, 14, 69);
+}
+.dots{
+    /* border: 2px solid red; */
+}
+.single{
+    height: 0.6rem;
+    width: 0.6rem;
+    background-color: rgb(10, 99, 253);
+    border-radius: 50%;
+}
+.people[active="true"]{
+    background-color: rgb(10, 99, 253);
+}
+.people[active="true"] .name h3,
+.people[active="true"] .name .time p,
+.people[active="true"] .name .time span{
+    color: white;
+}
+.chatBox{
+    flex-basis: 45%;
+    border-left: 2px solid rgb(201, 201, 201);
+    border-right: 2px solid rgb(201, 201, 201);
+    padding:2%;
+    display: flex;
+    flex-direction: column;
+}
+.chatBox .info{
+    background: white;
+    flex-basis: 10%;
+    width: 100%;
+    border-radius: 0.3rem;
+    padding: 0 1.5rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left,.right{
+    display: flex;
+    align-items: center;
+}
+.left .image{
+    margin-right: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.status h3{
+    color: rgb(14, 14, 69);
+}
+.status span{
+    color: gray;
+    font-size: 0.9rem;
+    /* display: none; */
+}
+.video{
+    margin: 0 2rem;
+    color: rgb(10, 99, 253);
+}
+.call{
+    color: rgb(10, 99, 253);
+}
+.chats{
+    flex-basis: 70%;
+    overflow: scroll;
+    padding: 1rem 0;
+    /* border: 2px solid red; */
+}
+.rec_wrapper,.sent_wrapper{
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    margin: 1rem 0;
+}
+.person{
+    align-self: flex-end;
+}
+.person img{
+    height: 50%;
+    width: 2rem;
+    border-radius: 50%;
+}
+.rec_wrapper .person{
+    margin-right: 1rem;
+}
+.sent_wrapper .person{
+    margin-left: 1rem;
+}
+.rec_wrapper{
+    justify-content: flex-start;
+}
+.sent_wrapper{
+    justify-content: flex-end;
+}
+.rec_msg,.sent_msg{
+    display: flex;
+    border-radius: 1rem;
+    padding: 1rem;
+    max-width: 65%;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    line-height: 1.3rem;
+    font-weight: 400;
+}
+.rec_msg{
+    background-color: white;
+    border-bottom-left-radius: 0;
+}
+.sent_msg{
+    background-color: rgb(10, 99, 253);
+    color: white;
+    border-bottom-right-radius: 0;
+}
+.send{
+    flex-basis: 10%;
+    display: flex;
+    align-items: center;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+.send .plus,.send .emojis{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: rgb(10, 99, 253);
+}
+.plus{
+    flex-basis: 10%;
+    /* border: 2px solid red; */
+    justify-content: center;
+}
+.emojis{
+    flex-basis: 20%;
+    justify-content: space-around;
+    /* border: 2px solid red;    */
+}
+.send textarea{
+    border: none;
+    height: 100%;
+    flex-basis: 70%;
+    display: flex;
+    padding-top: 1.7rem;
+    resize: none;
+}
+.send textarea:focus{
+    outline: none;
+}
+.plane{
+    background: rgb(10, 99, 253);
+    color: white;
+    padding: 0.7rem 0.9rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.plane:hover{
+    transform: scale(1.1,1.1);
+}
+
+.userInfo{
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    /* display: none; */
+}
+
+.userInfo .profileImg{
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+}
+.profileImg img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+.profileImg h1{
+    color: rgb(14, 14, 69);
+    margin: 0.8rem 0 0.4rem 0;
+    font-size: 1.2rem;
+}
+.profileImg p{
+    color: rgb(151, 151, 151);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.personalInfo{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.3rem;
+}
+.personalInfo h3{
+    color: rgb(14, 14, 69);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.userDetails{
+    display: flex;
+    align-items: center;
+    margin: 0.8rem 0;
+    color: gray;
+    font-size: 0.9em;
+}
+.userDetails i{
+    margin:0 1rem 0 0.5rem;
+}
+.addTag{
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    color: gray;
+    margin-top: 1rem;
+}
+.addTag i{
+    margin: 0 1rem 0 0.5rem;
+}
