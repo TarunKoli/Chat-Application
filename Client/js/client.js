@@ -72,6 +72,11 @@
     Users.set(user.email, user);
   });
 
+  socket.on("mod-status", ({ id, status }) => {
+    console.log(id, status);
+    stat.style.display = status ? "block" : "none";
+  });
+
   // utility functions
 
   send.addEventListener("click", () => {

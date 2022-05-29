@@ -103,19 +103,44 @@ io.on("connection", (socket) => {
     users[index].status = true;
     user = users[index];
     socket.broadcast.emit("user-joined", user);
+
+    rooms.forEach((room) => {
+      if (
+        room.sender.id === users[index].id ||
+        room.reciever.id === users[index].id
+      ) {
+        socket
+          .to(room.roomId)
+          .emit("mod-status", { id: users[index].id, status: true });
+      }
+    });
   });
+
   socket.on("join-room", ({ roomId, oldRoom }) => {
     if (oldRoom.roomId) socket.leave(oldRoom.roomId);
     socket.join(roomId);
   });
+
   socket.on("send-msg", ({ roomId, msg }) => {
     socket.to(roomId).emit("recieve", msg);
   });
+
   socket.on("disconnect", () => {
     const index = users.findIndex((person) => person.socketId === socket.id);
     if (index > -1) {
       users[index].status = false;
       socket.broadcast.emit("left", users[index]);
+
+      rooms.forEach((room) => {
+        if (
+          room.sender.id === users[index].id ||
+          room.reciever.id === users[index].id
+        ) {
+          socket
+            .to(room.roomId)
+            .emit("mod-status", { id: users[index].id, status: false });
+        }
+      });
     }
   });
 });
