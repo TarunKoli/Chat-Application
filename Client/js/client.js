@@ -65,6 +65,7 @@
 
   socket.on("recieve", (msg) => {
     createMsg("rec", msg.text);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
   });
 
   socket.on("left", (user) => {
@@ -92,7 +93,14 @@
 
     image.src = "./assets/user.jpg";
     person.classList.add("person");
-    para.textContent = msg;
+    let plotMsg = msg.split(" ");
+
+    plotMsg.forEach((message) => {
+      let wordBlock = document.createElement("span");
+      if (message.length > 40) wordBlock.style.wordBreak = "break-all";
+      wordBlock.textContent = message + " ";
+      para.appendChild(wordBlock);
+    });
 
     type === "rec"
       ? msgWrap.classList.add("rec_msg")
@@ -228,6 +236,7 @@
       .then((data) => {
         socket.emit("send-msg", { roomId: currentRoom.roomId, msg: data.msg });
         createMsg("sent", data.msg.text);
+        chatContainer.scrollTop = chatContainer.scrollHeight;
         msgInp.value = "";
       });
   };

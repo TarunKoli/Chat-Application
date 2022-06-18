@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;300;400;500;600;700&display=swap');
+:root{
+    --theme-color:#0874fc;
+    --bg-color:#f2f4f5;
+    --text-color:#002147;
+    --text-grey: #6D7B8D;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
 }
 body{
     height: 100vh;
@@ -14,12 +20,32 @@ main{
     display: flex;
     height: 100%;
     width: 100%;
-    background: rgb(232, 238, 245);
+    background: var(--bg-color);
 }
 .sideNav{
     height: 100%;
     flex-basis: 5%;
-    background: rgb(10, 99, 253);
+    background: var(--theme-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+.sideNav .topsec,.centersec{
+    height: 1.6rem;
+    width: 1.6rem;
+    cursor: pointer;
+    /* border: 2px solid red; */
+}
+.centersec{
+    margin-top:10rem;
+}
+.centersec img{
+    margin: 1rem 0;
+}
+.topsec img,.centersec img{
+    width: 100%;
+    height: 100%;
 }
 .rightSide{
     flex-basis: 95%;
@@ -31,12 +57,12 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3%;
+    padding: 0 4%;
     box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
 }
 .logo{
-    height: 4rem;
-    width: 4rem;
+    height: 2rem;
+    width: 10rem;
 }
 .logo img, .pic>img{
     width: 100%;
@@ -48,24 +74,63 @@ main{
 }
 .search{
     display: flex;
+    /* border: 2px solid red; */
+    align-items: center;
 }
-.search p,.profile p,.searchChats p{
+.icon img{
+    height: 1.5rem;
+}
+.search p{
+    font-size: 0.9rem;
+    color: #A9A9A9;
+    margin-left: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+.profile p,.searchChats p{
     margin-left: 1rem;
 }
 .notification{
     margin: 0 2rem 0 5rem;
+    position: relative;
+}
+.notification::before{
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    height: 0.5rem;
+    width: 0.5rem;
+    background: var(--theme-color);
+    border-radius: 50%;
 }
 .profile{
     display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color:  #4C5866;
+    font-weight: 500;
+}
+.profile .user{
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+}
+.profile .user img{
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+.profile .icon img{
+    height: 0.7rem;
+    width: 0.7rem;
+    margin: 0.4rem 0 0 0.6rem;
 }
 .chatSection{
     display: flex;
-    /* border: 2px solid red; */
     height: 100%;
 }
 .conversations{
     height: 100%;
-    /* border: 2px solid red; */
     flex-basis: 30%;
     padding: 2% 2.5% 6% 3%;
     overflow: scroll;
@@ -77,29 +142,41 @@ main{
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    color: rgb(14, 14, 69);
+    color: var(--text-color);
 }
 .searchChats{
     display: flex;
-    padding: 0.6rem 1rem;
-    border: 2px solid rgb(201, 201, 201);
+    padding: 0.5rem 1rem;
+    border: 1px solid rgb(213, 213, 213);
     border-radius: 0.3rem;
     color: rgb(170, 170, 170);
     margin: 1rem 0 0.5rem 0;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
+    align-items: center;
 }
 .recentNew{
     display: flex;
     justify-content: space-between;
-    color: rgb(14, 14, 69);
-    font-size: 0.9rem;
+    color: var(--text-color);
+    font-size: 0.8rem;
+    margin: 0.8rem 0;
     padding: 0 0.3rem;
     font-weight: 500;
 }
+.recentNew div{
+    display: flex;
+    align-items: center;
+}
+.recentNew div img{
+    height: 0.5rem;
+    width: 0.5rem;
+    margin-left: 0.3rem;
+    margin-top: 0.2rem;
+}
 .people{
     display: flex;
-    padding: 0.4rem 1rem;
+    padding: 0.5rem 1rem;
     align-items: center;
     justify-content: space-between;
     background-color: white;
@@ -128,20 +205,20 @@ main{
     display: flex;
     align-items: flex-end;
     font-size: 0.8rem;
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
 }
 .time p{
-     color: rgb(14, 14, 69);
+     color: var(--text-color);
      font-weight: 500;
 }
 .time span{
-    color: gray;
+    color: var(--text-grey);
     margin-left: 0.5rem;
 }
 .name h3{
     font-size: 1rem;
     font-weight: 600;
-    color: rgb(14, 14, 69);
+    color: var(--text-color);
 }
 .dots{
     /* border: 2px solid red; */
@@ -149,11 +226,11 @@ main{
 .single{
     height: 0.6rem;
     width: 0.6rem;
-    background-color: rgb(10, 99, 253);
+    background-color: var(--theme-color);
     border-radius: 50%;
 }
 .people[active="true"]{
-    background-color: rgb(10, 99, 253);
+    background-color: var(--theme-color);
 }
 .people[active="true"] .name h3,
 .people[active="true"] .name .time p,
@@ -162,8 +239,8 @@ main{
 }
 .chatBox{
     flex-basis: 45%;
-    border-left: 2px solid rgb(201, 201, 201);
-    border-right: 2px solid rgb(201, 201, 201);
+    border-left: 2px solid rgb(225, 225, 225);
+    border-right: 2px solid rgb(225, 225, 225);
     padding:2%;
     display: flex;
     flex-direction: column;
@@ -194,7 +271,7 @@ main{
     border-radius: 50%;
 }
 .status h3{
-    color: rgb(14, 14, 69);
+    color: var(--text-color);
 }
 .status span{
     color: gray;
@@ -202,16 +279,17 @@ main{
     /* display: none; */
 }
 .video{
-    margin: 0 2rem;
-    color: rgb(10, 99, 253);
+    margin: 0 1.5rem;
 }
-.call{
-    color: rgb(10, 99, 253);
+.video img, .call img{
+    height: 1.5rem;
+    width: 1.5rem;
 }
 .chats{
     flex-basis: 70%;
     overflow: scroll;
     padding: 1rem 0;
+    scroll-behavior: smooth;
     /* border: 2px solid red; */
 }
 .rec_wrapper,.sent_wrapper{
@@ -264,10 +342,11 @@ main{
 .rec_msg{
     background-color: white;
     border-bottom-left-radius: 0;
+    color: rgba(0, 33, 71,0.9);
 }
 .sent_msg{
-    background-color: rgb(10, 99, 253);
-    color: white;
+    background-color: var(--theme-color);
+    color: rgba(255, 255, 255,0.9);
     border-bottom-right-radius: 0;
 }
 .send{
@@ -283,7 +362,7 @@ main{
     display: flex;
     align-items: center;
     background-color: white;
-    color: rgb(10, 99, 253);
+    color: var(--theme-color);
 }
 .plus{
     flex-basis: 10%;
@@ -303,16 +382,31 @@ main{
     padding-top: 1.7rem;
     resize: none;
 }
+.send textarea::-webkit-scrollbar{
+    display: none;
+}
 .send textarea:focus{
     outline: none;
 }
+.emoji{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .plane{
-    background: rgb(10, 99, 253);
+    background: var(--theme-color);
     color: white;
-    padding: 0.7rem 0.9rem;
+    padding: 0.8rem;
     border-radius: 0.3rem;
     cursor: pointer;
     transition: 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.plane img,.emoji img{
+    height: 1.3rem;
+    width: 1.3rem;
 }
 .plane:hover{
     transform: scale(1.1,1.1);
@@ -341,12 +435,12 @@ main{
     border-radius: 50%;
 }
 .profileImg h1{
-    color: rgb(14, 14, 69);
+    color: var(--text-color);
     margin: 0.8rem 0 0.4rem 0;
     font-size: 1.2rem;
 }
 .profileImg p{
-    color: rgb(151, 151, 151);
+    color: var(--text-grey);
     font-size: 0.9rem;
     font-weight: 500;
 }
@@ -357,19 +451,24 @@ main{
     border-radius: 0.3rem;
 }
 .personalInfo h3{
-    color: rgb(14, 14, 69);
+    color: var(--text-color);
     font-size: 1rem;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 .userDetails{
     display: flex;
     align-items: center;
     margin: 0.8rem 0;
-    color: gray;
+    color: var(--text-grey);
     font-size: 0.9em;
 }
-.userDetails i{
-    margin:0 1rem 0 0.5rem;
+.userDetails p{
+    margin-bottom: 0.05rem;
+}
+.userDetails img{
+    width: 1.5rem;
+    margin:0 0.8rem 0 0.5rem;
 }
 .addTag{
     padding: 1rem;
@@ -377,7 +476,7 @@ main{
     border-radius: 0.3rem;
     display: flex;
     align-items: center;
-    color: gray;
+    color: var(--text-grey);
     margin-top: 1rem;
 }
 .addTag i{

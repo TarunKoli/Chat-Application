@@ -10,36 +10,45 @@
 </head>
 <body>
     <main>      
-        <div class="sideNav"></div>  
+        <div class="sideNav">
+            <div class="topsec">
+                <img src="./assets/dashboard.svg" alt="dashboard-icon">
+            </div>
+            <div class="centersec">
+                <img src="./assets/home.svg" alt="home-icon">
+                <img src="./assets/chat.svg" alt="chat-icon">
+                <img src="./assets/people.svg" alt="people-icon">
+                <img src="./assets/pie-white.svg" alt="pie-icon">
+                <img src="./assets/circle.svg" alt="circle-icon">
+                <img src="./assets/tv.svg" alt="tv-icon">
+                <img src="./assets/graph.svg" alt="graph-icon">
+            </div>
+        </div>  
        
         <section class="rightSide">
             
             <nav class="nav">
                 <div class="logo">
-                    <img src="./assets/logo.webp" alt="logo">
+                    <img src="./assets/logo.svg" alt="logo">
                 </div>
                 <div class="right-box">
                     <div class="search">
                         <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                          </svg>
+                          <img src="./assets/search.svg" alt="search-icon">
                         </div>
                         <p>Search here....</p>
                     </div>
                     <div class="notification">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
-                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
-                        </svg>
+                        <img src="./assets/bell.svg" alt="bell-icon">
                     </div>
                     <div class="profile">
                         <div class="user">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                              </svg>
+                           <img src="./assets/user.jpg" alt="">
                         </div>
                         <p>Tarun Koli</p>
+                        <div class="icon">
+                            <img src="./assets/angle-down.svg" alt="angle-down-icon">
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -50,15 +59,19 @@
                     <h2>Conversations</h2>
                     <div class="searchChats">
                         <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                          </svg>
+                            <img src="./assets/search.svg" alt="search-icon">
                         </div>
                         <p>Search here....</p>
                     </div>
                     <div class="recentNew">
-                        <p>Recent Chats</p>
-                        <p>New Chats</p>
+                        <div>
+                            <p>Recent Chats</p>
+                            <img src="./assets/angle-down.svg" alt="angle-down-icon">
+                        </div>
+                        <div>
+                            <p>New Chats</p>
+                            <img src="./assets/angle-down.svg" alt="angle-down-icon">
+                        </div>
                     </div>
 
                     <div class="members">
@@ -99,8 +112,8 @@
                             </div>
                         </div>
                         <div class="right">
-                            <div class="video"><i class="fas fa-solid fa-video"></i></i></div>
-                            <div class="call"><i class="fas fa-solid fa-phone"></i></div>
+                            <div class="video"><img src="./assets/Video.svg" alt="video-icon"></div>
+                            <div class="call"><img src="./assets/call.svg" alt="call-icon"></div>
                         </div>
                     </div>
 
@@ -122,16 +135,18 @@
                             <div class="person">
                                 <img src="./assets/user.jpg" alt="user_img">
                             </div>
-                        </div>
-                       -->
+                        </div> -->
+                      
                     </div>
                    
                     <div class="send">
                         <div class="plus"><i class="fas fa-solid fa-plus"></i></div>
                         <textarea name="typeMsg" id="msgInp" cols="30" placeholder="Type a message here"></textarea>
                         <div class="emojis">
-                            <div class="emoji"><i class="fas fa-solid fa-phone"></i></div>
-                            <div class="plane"><i class="fas fa-solid fa-paper-plane"></i></div>
+                            <div class="emoji">
+                                <img src="./assets/smile.svg" alt="smile-icon">
+                            </div>
+                            <div class="plane"><img src="./assets/send.svg" alt=""></div>
                         </div>
                     </div>
                 
@@ -146,15 +161,15 @@
                     <div class="personalInfo">
                         <h3>Personal Information</h3>
                         <div class="userDetails">
-                            <i class="fas fa-solid fa-envelope"></i>
+                         <img src="./assets/post.svg" alt="post-icon">
                             <p>Support@whelp.net</p>
                         </div>
                         <div class="userDetails">
-                            <i class="fas fa-solid fa-phone"></i>
+                            <img src="./assets/call-gry.svg" alt="">
                             <p>+1 (786) 903 - 7331</p>
                         </div>
                         <div class="userDetails">
-                            <i class="fas fa-solid fa-clock"></i>
+                           <img src="./assets/clock.svg" alt="">
                             <p>Mon - Fri : 9am - 6pm</p>
                         </div>
                     </div>
